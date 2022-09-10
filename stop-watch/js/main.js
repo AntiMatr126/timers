@@ -35,7 +35,7 @@ function pause() {
 
     const button = document.getElementById('button');
     button.innerText = 'Start';
-    button.setAttribute('onclick','start()');
+    button.setAttribute('onclick','start();');
     button.style.backgroundColor = 'greenyellow';
 
     document.getElementById('lap').style.display = 'none';
@@ -48,7 +48,7 @@ function stop() {
 
     const button = document.getElementById('stop');
     button.innerText = 'Reset';
-    button.setAttribute('onclick','reset()');
+    button.setAttribute('onclick','reset(); document.getElementById(\'stop\').innerText = \'Stop\';document.getElementById(\'stop\').setAttribute(\'onclick\',\'null\')');
 }
 
 function reset() {
