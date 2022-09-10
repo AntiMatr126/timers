@@ -154,13 +154,59 @@ function mainDisplay(hours,minutes,seconds,other) { // Main display used for lap
 }
 
 function setLapTime(hours,minutes,seconds,other) {
+    if (hours < 0) {
+        hours = 0;
+    }
+    if (minutes < 0) {
+        minutes = 0;
+    }
+    if (seconds < 0) {
+        seconds = 0;
+    }
+    if (other < 0) {
+        other = 0;
+    }
+
     time = [hours,minutes,seconds,other];
     mainDisplay(hours,minutes,seconds,other);
 }
 
-function setLapTime(hours,minutes,seconds,other) {  
-    time = [hours,minutes,seconds,other];
-    mainDisplay(hours,minutes,seconds,other);
+function setTotalTime(hours,minutes,seconds,other) {
+    if (hours < 0) {
+        hours = 0;
+    }
+    if (minutes < 0) {
+        minutes = 0;
+    }
+    if (seconds < 0) {
+        seconds = 0;
+    }
+    if (other < 0) {
+        other = 0;
+    }
+
+    totalTime = [hours,minutes,seconds,other];
+    lowerDisplay(hours,minutes,seconds,other);
+
+    hours = hours - time[0];
+    minutes = minutes-time[1];
+    seconds = seconds-time[2];
+    other = other - time[3];
+
+    if (hours < 0) {
+        hours = 0;
+    }
+    if (minutes < 0) {
+        minutes = 0;
+    }
+    if (seconds < 0) {
+        seconds = 0;
+    }
+    if (other < 0) {
+        other = 0;
+    }
+
+    setLapTime(hours-time[0],minutes-time[1],seconds-time[2],other-time[3]);
 }
 
 function lowerDisplay(hours,minutes,seconds,other) { // Main display used for lap time
