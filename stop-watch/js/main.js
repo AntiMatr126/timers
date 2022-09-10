@@ -261,7 +261,7 @@ function addLap() {
     el.innerHTML = text + '<br>';
 
     el.style.position = 'relative';
-    el.style.fontSize = '30px';
+    el.style.fontSize = '24px';
     el.style.fontFamily = '\'Courier New\', Courier, monospace';
     el.setAttribute('class','lap');
 
@@ -295,7 +295,7 @@ function addLap() {
     el2.innerHTML = text2 + '<br>';
 
     el2.style.position = 'relative';
-    el2.style.fontSize = '30px';
+    el2.style.fontSize = '24px';
     el2.style.fontFamily = '\'Courier New\', Courier, monospace'
     el2.setAttribute('class','lap');
 
